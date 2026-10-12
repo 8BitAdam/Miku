@@ -1,0 +1,76 @@
+.media {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.back-link,
+iframe {
+    display: block;
+}
+
+.back-link {
+    margin-bottom: 1em;
+}
+
+@media (max-width: 800px) {
+    iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 0.8em;
+    font-size: 35px;
+    margin-bottom: 1em;
+
+    a {
+        color: var(--color-light);
+        background-color: var(--color-dark);
+        border-radius: 50px;
+        padding-top: 8px;
+        height: 58px;
+        width: 58px;
+        text-align: center;
+        transition: background-color 0.2s ease-in-out;
+    }
+    a:hover {
+        background-color: dodgerblue;
+    }
+}
+
+.hero {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    background-color: blanchedalmond;
+    .hero-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: white;
+        text-align: center;
+        line-height: 600px;
+        z-index: 1;
+        font-size: clamp(45px, 5vw, 100px);
+        color: orange;
+        mix-blend-mode: soft-light;
+        font-weight: bold;
+    }
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        mix-blend-mode: overlay;
+        mix-blend-mode: darken;
+    }
+}

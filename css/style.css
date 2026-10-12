@@ -1,0 +1,93 @@
+:root{
+    --color-dark:#7ec9de;
+    --color-light:#1e153b;
+    --main-color: #11556e;
+    --color-link: #8edce5;
+    --site-width: 1100px;
+}
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+figure{
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    img:has(+figcaption){
+        height: calc(100%-1em);
+    }
+}
+body {
+    font-family: sans-serif;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+
+    > header {
+        background-color: var(--main-color);
+        
+        font-size: 1.2 em;
+        strong, em {
+            display: block;
+        }
+    }
+}
+footer {
+    text-align: center;
+    font-weight: bold;
+    padding: 2em;
+    display: grid;
+    
+}
+/*
+
+class is a way to apply styles to many elements
+    - in css period means class
+
+background-image: linear-gradient(to right, var(--main-color),var(--color-link));
+        padding: 1em;
+
+*/
+.site-width{
+    /*width is not very reponsive 
+    max with is more reponseive*/
+    max-width: var(--site-width);
+    margin: 0 auto;
+    padding: 1.253637em;
+    
+}
+.btn {
+    background-color: var(--color-link);
+    padding: 1em;
+    display: inline-block;
+    color: var(--color-dark);
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity .2s ease-in-out;
+    margin-top: 1em;
+}
+.btn:hover{
+    opacity: .857;
+
+}
+p {
+    margin-bottom: 1em;
+}
+p:last{
+    margin-bottom: 0;
+}
+.highlight {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 1em;
+}
+.feature-list {
+    header {
+        border-bottom: 2px solid var(--color-dark);
+        padding-bottom: .5em;
+        margin-bottom: 1em;
+    }
+}

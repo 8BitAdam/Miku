@@ -1,0 +1,25 @@
+/*
+The row class will reprsent a full width row on hour websute*/
+.row {
+    display:flex;
+    margin-bottom: 1em;
+    gap: 1em;
+}
+/*
+The col classes say how many coloums a iten shooudl take in a row
+*/
+.col-1{
+    flex:1;
+}
+.col-2{
+    flex:2;
+}
+.col-3{
+    flex:3;
+}
+
+@media (max-width: 800px) {
+    .row{
+        flex-direction: column;
+    }
+}

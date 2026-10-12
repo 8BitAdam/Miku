@@ -1,0 +1,50 @@
+body > header nav {
+    ul {
+        display: flex;
+        list-style-type: none;
+        li {
+
+
+        a{
+            color: var(--color-dark);
+            text-decoration: none;
+            font-size: 1.3em;
+            padding: 1em;
+            display: block;
+            border-bottom: 4px solid transparent;
+            text-align: center;
+            transition: border-color 4. ease-in-out,
+                        color .4s ease-in-out;
+
+            &:hover {
+            border-bottom: 4px solid var(--color-dark);
+            color: var(--link-alt)
+        }
+        }
+
+    }
+}
+}
+nav.left > ul {
+    justify-content: flex-start;
+}
+nav.right > ul {
+    justify-content: flex-end;
+}
+nav.center > ul {
+    justify-content: center;
+}
+nav.full > ul {
+    flex: 1;
+}
+nav > ul {
+    @media (max-width: 800px) {
+    flex-direction: column;
+    a:hover{
+        border-bottom: 7px solid transparent
+    }
+}
+}
+.top-color{
+    padding-bottom: 3em;
+}

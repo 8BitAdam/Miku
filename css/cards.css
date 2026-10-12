@@ -1,0 +1,26 @@
+.cards {
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px,auto));
+    gap: 2em;
+    >section {
+        box-shadow: 6px 5px 5px 0px rgba(0,0,0,0.16);
+        background-color: white;
+        > figure {
+            height: 400px;
+        }
+        >div {
+            padding: 1em;
+            >header {
+                color: var(--color-dark);
+                border-bottom: 1px solid var(--main-color);
+                margin-bottom: .5em;
+                padding-bottom: .5em;
+            }
+        }
+    }
+}
+.baby-cards {
+display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px,auto));
+    gap: 2em;
+}

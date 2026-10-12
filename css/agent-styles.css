@@ -1,0 +1,243 @@
+:root {
+    --color-dark: #dffcff;
+    --color-light: #101b35;
+    --main-color: #173d57;
+    --color-link: #39d9c8;
+    --link-alt: #3ef3c0;
+}
+
+body > header nav a {
+    transition: border-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+}
+
+.logo figure {
+    width: 96px;
+    height: 96px;
+    margin: 0;
+}
+
+.logo img {
+    border-radius: 50%;
+}
+
+.baby-cards {
+    align-items: stretch;
+}
+
+.baby-cards.four-up {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.baby-cards.four-up > figure > a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+.baby-cards.four-up img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.baby-cards > figure {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    background-color: var(--main-color);
+    overflow: hidden;
+}
+
+.baby-cards > figure > img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.baby-cards figcaption {
+    flex: 1;
+    min-height: 6em;
+    padding: 1em;
+    color: var(--color-dark);
+    overflow-wrap: anywhere;
+    text-align: center;
+}
+
+.baby-cards h2 {
+    margin-top: 0;
+    margin-bottom: 0.35em;
+}
+
+.baby-cards p {
+    margin-bottom: 0;
+}
+
+.event-cards {
+    margin: 1.5em 0;
+}
+
+.event-cards > section {
+    background-color: var(--main-color);
+    color: var(--color-dark);
+}
+
+.event-cards > section > div > header {
+    color: var(--color-link);
+}
+
+.event-cards p {
+    margin-bottom: 0.75em;
+}
+
+.event-cards p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+    .baby-cards.four-up {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .album-cards > section {
+        display: block;
+    }
+
+    .album-cards > section > figure {
+        height: 300px;
+    }
+}
+
+#contact-form {
+    max-width: 620px;
+    overflow: hidden;
+    border: 1px solid rgba(57, 217, 200, 0.35);
+    background-color: #f4feff;
+    box-shadow: 0 12px 30px rgba(5, 15, 40, 0.35);
+}
+
+#contact-form > header {
+    background: linear-gradient(135deg, var(--main-color), #1b687c);
+    color: #dffcff;
+    padding: 1.5em 2em;
+}
+
+#contact-form > header h2 {
+    margin: 0;
+}
+
+#contact-form > div {
+    padding: 2em;
+}
+
+#contact-form label {
+    display: block;
+    color: #173d57;
+    letter-spacing: 0.04em;
+}
+
+#contact-form input:not([type="submit"]),
+#contact-form textarea {
+    width: 100%;
+    border: 2px solid #b7e9e8;
+    border-radius: 8px;
+    color: #101b35;
+    background-color: #ffffff;
+    transition: border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+
+#contact-form textarea {
+    min-height: 150px;
+    margin-bottom: 0.5em;
+    padding: 0.75em;
+    resize: vertical;
+    font: inherit;
+}
+
+#contact-form input:not([type="submit"]):focus,
+#contact-form textarea:focus {
+    border-color: var(--color-link);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(57, 217, 200, 0.2);
+}
+
+#contact-form input[type="submit"] {
+    border: 0;
+    border-radius: 8px;
+    background-color: var(--color-link);
+    color: #101b35;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+#contact-form input[type="submit"]:hover,
+#contact-form input[type="submit"]:focus {
+    background-color: #6ff5e6;
+    transform: translateY(-2px);
+}
+
+.banner-wrap {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.banner-wrap img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+.back-link {
+    color: var(--color-link);
+    display: inline-block;
+    margin-bottom: 1em;
+}
+
+.album-detail > div:first-of-type > section:last-child {
+    margin-bottom: 2em;
+}
+
+.album-detail .spotify-grid {
+    margin-top: 1em;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    max-width: var(--site-width);
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+}
+
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2em;
+}
+
+.section-container > section {
+    flex: 1 1 420px;
+    max-width: 520px;
+}
+
+.spotify-grid > section {
+    flex: 0 1 320px;
+    max-width: 320px;
+}
+
+.spotify-grid iframe {
+    max-width: 100%;
+    aspect-ratio: auto;
+}
